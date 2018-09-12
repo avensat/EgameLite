@@ -1,28 +1,28 @@
-This is the reference code for [egamecash](http://www.egamecash.org/) cryptocurrency.
+This is the reference code for [EgameLite](http:///) cryptocurrency.
 
-* Official homepage: [egamecash](http://www.egamecash.org/)
-* Official repository: [egamecash GitHub](https://github.com/egamecash)
-* Official Announcement thread: [egamecash BitcoinTalk](https://bitcointalk.org/index.php?topic=4458111.0)
-* Official Discord: [egamecash Discord](http://discord.gg/EmGDEQJ)
-* Official Facebook: [egamecash Facebook](https://www.facebook.com/egamecash)
-* Official Twitter: [egamecash Twitter](https://twitter.com/egamecash)
-* Official Telegram: [egamecash Telegram BR](http://t.me/egame_cash_br)
-* Official Telegram: [egamecash Telegram EN](http://t.me/egame_cash_en)
-* Official Block explorer: [egamecash Block explorer](http://explorer.egamecash.org/)
+* Official homepage: [EgameLite]
+* Official repository: [EgameLite GitHub]
+* Official Announcement thread: [EgameLite BitcoinTalk]
+* Official Discord: [EgameLite Discord]
+* Official Facebook: [EgameLite Facebook]
+* Official Twitter: [EgameLite Twitter]
+* Official Telegram: [EgameLite Telegram BR]
+* Official Telegram: [EgameLite Telegram EN]
+* Official Block explorer: [EgameLite Block explorer]
 
 
-## egamecash Cryptocurrency
+## EgameLite Cryptocurrency
 
-egamecash [EGM] is an ASIC resistant CryptoNightLite V1 algorithm based cryptocurrency. Fast transactions & privacy make this coin perfect for rewarding your workers, co-workers and colleagues for a job well done.
+EgameLite [EGL] is an ASIC resistant CryptoNightLite V1 algorithm based cryptocurrency. Fast transactions & privacy make this coin perfect for rewarding your workers, co-workers and colleagues for a job well done.
 
-Name: eGame Cash 
-Ticket: EGM 
+Name: EgameLite 
+Ticket: EGL
 PoW Hashing Algorithm: CryptoNight-Lite V1 (ASIC Resistant)
-Max Supply: 53,000,000 
-Difficulty Target: 240 Seconds 
+Max Supply: 2000 000 000 
+Difficulty Target: 120 Seconds 
 Minimun transaction fee: 0.00001 
-P2P Port: 35000 
-RPC Port: 35001 
+P2P Port: 45000 
+RPC Port: 45001 
 
 ## How to compile
 
@@ -45,7 +45,7 @@ sudo apt-get install -y build-essential python-dev gcc g++ git cmake librocksdb-
 **2. Get the coin**
 
 ``
-git clone https://github.com/egamecash/egamecash-node-daemon.git egamecash-daemon
+git clone https://github.com/avensat/EgameLite.git EgameLite
 ``
 
 **3. CHMOD**
@@ -53,7 +53,7 @@ git clone https://github.com/egamecash/egamecash-node-daemon.git egamecash-daemo
 - navigate to:
 
 ``
-cd egamecash-daemon/external/rocksdb/build_tools
+cd EgameLite/external/rocksdb/build_tools
 ``
 
 - execute the following commands:
@@ -140,7 +140,7 @@ cd
 ``
 
 ``
-git clone https://github.com/egamecash/egamecash-node-daemon.git egamecash-daemon
+git clone https://github.com/avensat/EgameLite.git EgameLite
 ``
 
 **4. CHMOD**
@@ -170,7 +170,7 @@ cd
 ``
 
 ``
-cd egamecash-daemon
+cd EgameLite
 ``
 
 - prepare the build
@@ -208,7 +208,7 @@ make
 
 
 ``
-cd <egamecash-daemon>
+cd <EgameLite>
 ``
 
 ``
@@ -307,13 +307,13 @@ cd
 - get the source code
 
 ``
-git clone https://github.com/egamecash/egamecash-node-daemon.git egamecash-daemon
+git clone https://github.com/avensat/EgameLite.git EgameLite
 ``
 
 - CHMOD
 
 ``
-cd egamecash-daemon/external/rocksdb/build_tools
+cd EgameLite/external/rocksdb/build_tools
 ``
 
 ``
