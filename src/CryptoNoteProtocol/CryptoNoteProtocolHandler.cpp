@@ -586,7 +586,7 @@ bool CryptoNoteProtocolHandler::on_connection_synchronized() {
     logger(Logging::INFO)
       << ENDL ;
       logger(INFO, BRIGHT_MAGENTA) << "===[ EgameLite Tip! ]=============================" << ENDL ;
-      logger(INFO, WHITE) << " Always exit egamecashd and Simplewallet with the \"exit\" command to preserve your chain and wallet data." << ENDL ;
+      logger(INFO, WHITE) << " Always exit EgameLite and Simplewallet with the \"exit\" command to preserve your chain and wallet data." << ENDL ;
       logger(INFO, WHITE) << " Use the \"help\" command to see a list of available commands." << ENDL ;
       logger(INFO, WHITE) << " Use the \"export_keys\" command in Simplewallet to display your keys for restoring a corrupted wallet." << ENDL ;
       logger(INFO, WHITE) << " If you need more assistance, visit the #HELP channel in the EgameLite Discord Chat - https://discordapp.com/invite/YpJc59E" << ENDL ;
