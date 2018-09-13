@@ -103,7 +103,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 } // parameters
 
 const char     CRYPTONOTE_NAME[]                             = "EgameLite";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "011401ff000180c0caf384a30202bb15c2d8e41a6a96989c7914f5575d5a19dee8ff845d28b0b1d902c48582c1c72101785c5ced24b3f58330593f64d7733ecdb69cbd9e34ea931457c64282992935b3";
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  TRANSACTION_VERSION_1;
