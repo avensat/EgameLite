@@ -39,7 +39,7 @@ const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 0;
 const size_t ZAWY_DIFFICULTY_V2                              = 0;
 const uint8_t ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION       = 0;
 const unsigned EMISSION_SPEED_FACTOR                         = 22;
-const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(100000000);
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(10000000000000);
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
@@ -103,7 +103,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 } // parameters
 
 const char     CRYPTONOTE_NAME[]                             = "EgameLite";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff000180c2d72f02574ebcf36f994ea23c303aff00d8aa959fd333dbbd4bf130cd10e94d4f65bbff2101623f483ada9ee465497a59f0a76989560c79c475172215d232eb51175fa01553";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "";
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  TRANSACTION_VERSION_1;
