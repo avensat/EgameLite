@@ -46,7 +46,7 @@ int main(int argc, char **argv)
     System::Dispatcher localDispatcher;
     System::Dispatcher *dispatcher = &localDispatcher;
 
-    /* Our connection to egamecashd */
+    /* Our connection to EgameLite */
     std::unique_ptr<CryptoNote::INode> node(
         new CryptoNote::NodeRpcProxy(config.host, config.port, 
                                      logger.getLogger()));
@@ -105,7 +105,7 @@ void run(CryptoNote::WalletGreen &wallet, CryptoNote::INode &node,
 
     do
     {
-        std::cout << InformationMsg("eGameCash v"
+        std::cout << InformationMsg("EgameLite v"
                                   + std::string(PROJECT_VERSION)
                                   + " Simplewallet") << std::endl;
 
@@ -132,15 +132,15 @@ void run(CryptoNote::WalletGreen &wallet, CryptoNote::INode &node,
 
     while (node.getLastKnownBlockHeight() == 0)
     {
-        std::cout << WarningMsg("It looks like egamecashd isn't open!")
+        std::cout << WarningMsg("It looks like EgameLite isn't open!")
                   << std::endl << std::endl
-                  << WarningMsg("Ensure egamecashd is open and has finished "
+                  << WarningMsg("Ensure EgameLite is open and has finished "
                                 "initializing.")
                   << std::endl
                   << WarningMsg("If it's still not working, try restarting "
-                                "egamecashd. The daemon sometimes gets stuck.") 
+                                "EgameLite. The daemon sometimes gets stuck.") 
                   << std::endl
-                  << WarningMsg("Alternatively, perhaps egamecashd can't "
+                  << WarningMsg("Alternatively, perhaps EgameLite can't "
                                 "communicate with any peers.")
                   << std::endl << std::endl
                   << WarningMsg("The wallet can't function until it can "
@@ -261,7 +261,7 @@ std::shared_ptr<WalletInfo> createViewWallet(CryptoNote::WalletGreen &wallet)
 
     while (true)
     {
-        std::cout << "Public EGM address: ";
+        std::cout << "Public XGL address: ";
 
         std::getline(std::cin, address);
         boost::algorithm::trim(address);
@@ -272,15 +272,15 @@ std::shared_ptr<WalletInfo> createViewWallet(CryptoNote::WalletGreen &wallet)
                       << "It should be 99 characters long, but it is "
                       << address.length() << " characters long!" << std::endl;
         }
-        else if (address.substr(0, 4) != "egm")
+        else if (address.substr(0, 4) != "xgl")
         {
             std::cout << WarningMsg("Invalid address! It should start with "
-                                    "\"egm\"!") << std::endl;
+                                    "\"xgl\"!") << std::endl;
         }
         else if (!CryptoNote::parseAccountAddressString(prefix, publicKeys,
                                                         address))
         {
-            std::cout << WarningMsg("Failed to parse EGM address! Ensure you "
+            std::cout << WarningMsg("Failed to parse XGL address! Ensure you "
                                     "have entered it correctly.")
                       << std::endl;
         }
@@ -1099,7 +1099,7 @@ void blockchainHeight(CryptoNote::INode &node, CryptoNote::WalletGreen &wallet)
     if (localHeight == 0 && remoteHeight == 0)
     {
         std::cout << WarningMsg("Looks like you don't have "
-                                "egamecashd open!")
+                                "EgameLite open!")
                   << std::endl;
     }
     else if (walletHeight + 1000 < remoteHeight && localHeight == remoteHeight)
@@ -1181,7 +1181,7 @@ CryptoNote::BlockDetails getBlock(uint32_t blockHeight,
 {
     CryptoNote::BlockDetails block;
 
-    /* No connection to egamecashd */
+    /* No connection to EgameLite */
     if (node.getLastKnownBlockHeight() == 0)
     {
         return block;
@@ -1243,7 +1243,7 @@ void printOutgoingTransfer(CryptoNote::WalletTransaction t,
         std::cout << WarningMsg("Payment ID: " + paymentID) << std::endl;
     }
 
-    /* Couldn't get timestamp, maybe old node or egamecashd closed */
+    /* Couldn't get timestamp, maybe old node or EgameLite closed */
     if (blockTime != "")
     {
         std::cout << WarningMsg("Timestamp: " + blockTime) << std::endl;
@@ -1384,7 +1384,7 @@ void findNewTransactions(CryptoNote::INode &node,
 
     if (localHeight != remoteHeight)
     {
-        std::cout << "Your egamecashd isn't fully synced yet!" << std::endl
+        std::cout << "Your EgameLited isn't fully synced yet!" << std::endl
                   << "Until you are fully synced, you won't be able to send "
                   << "transactions,"
                   << std::endl
@@ -1544,7 +1544,7 @@ ColouredMsg getPrompt(std::shared_ptr<WalletInfo> &walletInfo)
 
     std::string shortName = walletName.substr(0, promptLength);
 
-    return InformationMsg("[EGM " + shortName + "]: ");
+    return InformationMsg("[XGL " + shortName + "]: ");
 }
 
 void connectingMsg()
@@ -1559,9 +1559,9 @@ void viewWalletMsg()
 {
     std::cout << InformationMsg("Please remember that when using a view wallet "
                                 "you can only view incoming transactions!")
-              << std::endl << "This means if you received 100 EGM and then "
-              << "sent 50 EGM, your balance would appear to still be 100 "
-              << "EGM." << std::endl
+              << std::endl << "This means if you received 100 XGL and then "
+              << "sent 50 XGL, your balance would appear to still be 100 "
+              << "XGL." << std::endl
               << "To effectively use a view wallet, you should only deposit "
               << "to this wallet." << std::endl
               << "If you have since needed to withdraw, send your remaining "
