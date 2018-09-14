@@ -1288,7 +1288,7 @@ bool pool_wallet::confirmTransaction(TransferCommand cmd, bool multiAddress) {
   std::string feeString;
 
   if (cmd.fee == 10) {
-    feeString = "0.1 EGM (minimum)";
+    feeString = "0.1 XGL (minimum)";
   } else {
     feeString = m_currency.formatAmount(cmd.fee) + " EGM";
   }
@@ -1299,7 +1299,7 @@ bool pool_wallet::confirmTransaction(TransferCommand cmd, bool multiAddress) {
 
   if (!multiAddress) {
     std::cout << "You are sending " << m_currency.formatAmount(cmd.dsts[0].amount)
-              << " EGM, with a fee of " << feeString << std::endl
+              << " XGL, with a fee of " << feeString << std::endl
               << "FROM: " << walletName << std::endl
               << "TO: " << std::endl << cmd.dsts[0].address << std::endl
               << std::endl;
@@ -1311,7 +1311,7 @@ bool pool_wallet::confirmTransaction(TransferCommand cmd, bool multiAddress) {
 
     for (auto destination : cmd.dsts) {
       std::cout << "You are sending " << m_currency.formatAmount(destination.amount)
-                << " EGM" << std::endl << "FROM: " << walletName << std::endl
+                << " XGL" << std::endl << "FROM: " << walletName << std::endl
                 << "TO: " << std::endl << destination.address << std::endl
                 << std::endl;
     }
@@ -1510,7 +1510,7 @@ bool pool_wallet::print_outputs_from_transaction(const std::vector<std::string>&
 
       found = true;
 
-      logger(INFO, GREEN) << "The transaction output of " << wtip << " EGM belongs to you!";
+      logger(INFO, GREEN) << "The transaction output of " << wtip << " XGL belongs to you!";
     }
   }
 
@@ -1522,7 +1522,7 @@ bool pool_wallet::print_outputs_from_transaction(const std::vector<std::string>&
   {
     std::string wtip = m_currency.formatAmount(sum);
 
-    logger(INFO, GREEN) << "Outputs totalling " << wtip << " EGM were sent to your wallet!";
+    logger(INFO, GREEN) << "Outputs totalling " << wtip << " XGL were sent to your wallet!";
   }
 
   return true;
@@ -1613,7 +1613,7 @@ int main(int argc, char* argv[]) {
 
   logManager.configure(buildLoggerConfiguration(logLevel, Common::ReplaceExtenstion(argv[0], ".log")));
 
-  std::cout << "egamecash v" << PROJECT_VERSION << " Poolwallet" << std::endl;
+  std::cout << "EgameLite v" << PROJECT_VERSION << " Poolwallet" << std::endl;
 
   std::cout << "Please note that usage of simplewallet/poolwallet has been "
             << "deprecated for pool usage." << std::endl;
